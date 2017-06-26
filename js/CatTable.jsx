@@ -19,16 +19,28 @@ class CatTable extends React.Component {
        );
      })
 
+     const female = this.props.kitties.filter(cat => {
+       return cat.category === 'female';
+     });
+
+     const femaleRows = female.map(cat => {
+       return (<tr key={cat.name}>
+          <td>{cat.name}</td>
+          <td>{cat.age}</td>
+          </tr>
+       );
+     })
+
     return (
       <tbody>
-          {maleRows}
+          <tr>
+              <th colSpan="2">male</th>
+          </tr>
+            {maleRows}
           <tr>
               <th colSpan="2">female</th>
           </tr>
-          <tr>
-              <td>Ciapek</td>
-              <td>4</td>
-          </tr>
+            {femaleRows}
       </tbody>
 
             )

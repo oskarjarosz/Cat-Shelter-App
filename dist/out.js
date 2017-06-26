@@ -9982,9 +9982,39 @@ var CatTable = function (_React$Component) {
         );
       });
 
+      var female = this.props.kitties.filter(function (cat) {
+        return cat.category === 'female';
+      });
+
+      var femaleRows = female.map(function (cat) {
+        return _react2.default.createElement(
+          'tr',
+          { key: cat.name },
+          _react2.default.createElement(
+            'td',
+            null,
+            cat.name
+          ),
+          _react2.default.createElement(
+            'td',
+            null,
+            cat.age
+          )
+        );
+      });
+
       return _react2.default.createElement(
         'tbody',
         null,
+        _react2.default.createElement(
+          'tr',
+          null,
+          _react2.default.createElement(
+            'th',
+            { colSpan: '2' },
+            'male'
+          )
+        ),
         maleRows,
         _react2.default.createElement(
           'tr',
@@ -9995,20 +10025,7 @@ var CatTable = function (_React$Component) {
             'female'
           )
         ),
-        _react2.default.createElement(
-          'tr',
-          null,
-          _react2.default.createElement(
-            'td',
-            null,
-            'Ciapek'
-          ),
-          _react2.default.createElement(
-            'td',
-            null,
-            '4'
-          )
-        )
+        femaleRows
       );
     }
   }]);
