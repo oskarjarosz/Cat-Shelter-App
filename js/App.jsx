@@ -13,7 +13,7 @@ class App extends React.Component {
        <section>
               <table>
                   <CatHead />
-                  <CatTable />
+                  <CatTable kitties={this.props.kitties} />
               </table>
               </section>
           </section>
