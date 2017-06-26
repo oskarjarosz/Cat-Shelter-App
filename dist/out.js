@@ -9922,7 +9922,7 @@ exports.default = CatHead;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -9948,86 +9948,72 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var CatTable = function (_React$Component) {
-    _inherits(CatTable, _React$Component);
+  _inherits(CatTable, _React$Component);
 
-    function CatTable() {
-        _classCallCheck(this, CatTable);
+  function CatTable() {
+    _classCallCheck(this, CatTable);
 
-        return _possibleConstructorReturn(this, (CatTable.__proto__ || Object.getPrototypeOf(CatTable)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (CatTable.__proto__ || Object.getPrototypeOf(CatTable)).apply(this, arguments));
+  }
+
+  _createClass(CatTable, [{
+    key: 'render',
+    value: function render() {
+      console.log(this.props.kitties);
+
+      var male = this.props.kitties.filter(function (cat) {
+        return cat.category === 'male';
+      });
+
+      var maleRows = male.map(function (cat) {
+        return _react2.default.createElement(
+          'tr',
+          { key: cat.name },
+          _react2.default.createElement(
+            'td',
+            null,
+            cat.name
+          ),
+          _react2.default.createElement(
+            'td',
+            null,
+            cat.age
+          )
+        );
+      });
+
+      return _react2.default.createElement(
+        'tbody',
+        null,
+        maleRows,
+        _react2.default.createElement(
+          'tr',
+          null,
+          _react2.default.createElement(
+            'th',
+            { colSpan: '2' },
+            'female'
+          )
+        ),
+        _react2.default.createElement(
+          'tr',
+          null,
+          _react2.default.createElement(
+            'td',
+            null,
+            'Ciapek'
+          ),
+          _react2.default.createElement(
+            'td',
+            null,
+            '4'
+          )
+        )
+      );
     }
+  }]);
 
-    _createClass(CatTable, [{
-        key: 'render',
-        value: function render() {
-            console.log(this.props.kitties);
-            return _react2.default.createElement(
-                'tbody',
-                null,
-                _react2.default.createElement(
-                    'tr',
-                    null,
-                    _react2.default.createElement(
-                        'th',
-                        { colSpan: '2' },
-                        'male'
-                    )
-                ),
-                _react2.default.createElement(
-                    'tr',
-                    null,
-                    _react2.default.createElement(
-                        'td',
-                        null,
-                        'Fidel'
-                    ),
-                    _react2.default.createElement(
-                        'td',
-                        null,
-                        '4'
-                    )
-                ),
-                _react2.default.createElement(
-                    'tr',
-                    null,
-                    _react2.default.createElement(
-                        'td',
-                        null,
-                        'Fidel'
-                    ),
-                    _react2.default.createElement(
-                        'td',
-                        null,
-                        '4'
-                    )
-                ),
-                _react2.default.createElement(
-                    'tr',
-                    null,
-                    _react2.default.createElement(
-                        'th',
-                        { colSpan: '2' },
-                        'female'
-                    )
-                ),
-                _react2.default.createElement(
-                    'tr',
-                    null,
-                    _react2.default.createElement(
-                        'td',
-                        null,
-                        'Yude'
-                    ),
-                    _react2.default.createElement(
-                        'td',
-                        null,
-                        '4'
-                    )
-                )
-            );
-        }
-    }]);
-
-    return CatTable;
+  return CatTable;
 }(_react2.default.Component);
 
 ;
@@ -10075,13 +10061,13 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(21);
-
-var _react2 = _interopRequireDefault(_react);
-
 var _reactDom = __webpack_require__(20);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _react = __webpack_require__(21);
+
+var _react2 = _interopRequireDefault(_react);
 
 var _App = __webpack_require__(26);
 

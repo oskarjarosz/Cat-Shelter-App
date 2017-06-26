@@ -1,7 +1,7 @@
 //Konfiguracja Webpack
 module.exports = {
+  output: { filename: "./dist/out.js" },
     entry: "./js/Script.jsx",
-    output: { filename: "./dist/out.js" },
     watch: true,
     module: {
         loaders: [

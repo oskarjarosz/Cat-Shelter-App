@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function(){
  {category: "female", age: "3", likesKids: true, name: "Meowly Cyrus"}
 ];
 
-
     ReactDOM.render(
         <App kitties ={kitties} />,
         document.getElementById('app')
